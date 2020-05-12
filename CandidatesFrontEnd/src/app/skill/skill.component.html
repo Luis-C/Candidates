@@ -1,0 +1,42 @@
+<mat-card class="skill">
+  <mat-card-title class="skill__title">
+    {{ skill.name }}
+
+    <!-- <span *ngIf="!isEditing">
+      <button mat-icon-button (click)="edit()">
+        <mat-icon>create</mat-icon>
+      </button>
+    </span> -->
+
+    <span *ngIf="isEditing">
+      <button mat-icon-button color="warn" (click)="delete()">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-icon-button (click)="save()">
+        <mat-icon>check_circle</mat-icon>
+      </button>
+    </span>
+  </mat-card-title>
+
+  <mat-slider
+    color="primary"
+    [disabled]="!isEditing"
+    max="5"
+    min="1"
+    step="1"
+    thumbLabel="true"
+    tickInterval="1"
+    [(ngModel)]="experience"
+  >
+  </mat-slider>
+
+  <mat-card-content *ngIf="!isEditing">
+    {{ skill.description }}
+  </mat-card-content>
+
+  <mat-card-content *ngIf="isEditing">
+    <mat-form-field class="skill__field">
+      <textarea [formControl]="input" matInput></textarea>
+    </mat-form-field>
+  </mat-card-content>
+</mat-card>

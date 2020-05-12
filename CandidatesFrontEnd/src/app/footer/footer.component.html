@@ -1,0 +1,17 @@
+<mat-toolbar class="footer translucent">
+  <button mat-button routerLink="/search">
+    <mat-icon>
+      search
+    </mat-icon>
+    SEARCH
+  </button>
+  <button mat-fab class="footer__home" color="primary" routerLink="/home">
+    <mat-icon>home</mat-icon>
+  </button>
+  <button mat-button (click)="logout()" [disabled]="disabled">
+    <mat-icon>
+      exit_to_app
+    </mat-icon>
+    LOGOUT
+  </button>
+</mat-toolbar>

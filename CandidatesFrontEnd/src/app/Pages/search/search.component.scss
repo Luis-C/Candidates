@@ -1,0 +1,21 @@
+.search {
+  &__field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-divider {
+      margin: -10px;
+    }
+  }
+}
+
+.search-result {
+  &__title {
+    display: flex;
+
+    &-icon {
+      margin: 5px;
+    }
+  }
+}

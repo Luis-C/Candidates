@@ -1,0 +1,12 @@
+.skill {
+  margin: 5px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__field {
+    width: 100%;
+  }
+}

@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* ------------------------ end of material setup -------------------------- */
+
+// amount of blur
+$blur-val: 10px;
+
+// global variables for theming
+:root {
+  // clear versions, for consistency 40% opacity
+  --pink-c: #ff408166;
+  --blue-gray-c: #26323866;
+  --hokie-stone-c: #75787b66;
+  --white-c: #ffffff66;
+  --blur-val: $blur-val;
+}
+
+html,
+body {
+  width: 100%;
+  overflow: auto;
+}
+
+body {
+  background-color: var(--hokie-stone);
+  background-image: url("./assets/images/bg3.jpg");
+  background-repeat: no-repeat;
+  // background-size: 100% 100%;
+  background-size: cover;
+  height: calc(100% - 50px);
+}
+
+.mat-card {
+  background-color: var(--blue-gray-c);
+  backdrop-filter: blur($blur-val);
+  -webkit-backdrop-filter: blur($blur-val);
+}
+
+.translucent {
+  background-color: var(--blue-gray-c);
+  backdrop-filter: blur($blur-val);
+  -webkit-backdrop-filter: blur($blur-val);
+}
+
+.notification {
+  background-color: var(--white-c);
+  backdrop-filter: blur($blur-val);
+  -webkit-backdrop-filter: blur($blur-val);
+}
+
+.mat-dialog-container {
+  background-color: var(--blue-gray-c);
+  backdrop-filter: blur($blur-val);
+  -webkit-backdrop-filter: blur($blur-val);
+}

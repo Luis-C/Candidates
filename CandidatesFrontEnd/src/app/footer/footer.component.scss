@@ -1,0 +1,11 @@
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  left: 0;
+  bottom: 0;
+
+  &__home {
+    margin-bottom: 50px;
+  }
+}

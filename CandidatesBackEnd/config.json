@@ -1,0 +1,4 @@
+{
+    "secret": "This is the candidates secret token",
+    "connectionString": "mongodb://localhost/Candidates"
+}

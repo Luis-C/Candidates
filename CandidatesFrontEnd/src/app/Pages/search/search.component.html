@@ -1,0 +1,74 @@
+<mat-card class="search">
+  <mat-card-title>
+    Search for Candidates:
+  </mat-card-title>
+
+  <mat-card-content>
+    <div
+      *ngFor="let skill of searchSkills.controls; let i = index"
+      class="search__field"
+    >
+      <mat-divider class="search__field-divider"></mat-divider>
+
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label> Skill: </mat-label>
+        <input
+          matInput
+          [formControl]="searchSkills.controls[i]"
+          type="text"
+          autocomplete="off"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Minimum level</mat-label>
+        <input
+          matInput
+          autocomplete="off"
+          type="number"
+          [max]="5"
+          [min]="1"
+          [(ngModel)]="values[i]"
+        />
+      </mat-form-field>
+
+      <mat-slider
+        color="primary"
+        disabled="false"
+        max="5"
+        min="1"
+        step="1"
+        thumbLabel="true"
+        tickInterval="1"
+        [(ngModel)]="values[i]"
+      ></mat-slider>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-icon-button (click)="add()"><mat-icon>add</mat-icon></button>
+    <button mat-icon-button (click)="remove()">
+      <mat-icon>remove</mat-icon>
+    </button>
+
+    <button mat-button (click)="search()">Search</button>
+    <button mat-button (click)="openDialog()">Subscribe</button>
+  </mat-card-actions>
+</mat-card>
+
+<!-- TODO: add results -->
+
+<div *ngIf="searchResults">
+  <mat-card *ngFor="let result of searchResults" class="search-result">
+    <mat-card-title class="search-result__title">
+      <mat-icon class="search-result__title-icon">account_circle</mat-icon
+      >{{ result.username }}
+    </mat-card-title>
+
+    <mat-card-subtitle
+      >{{ result.email }} ({{
+        result.jobSeeking ? "Seeking Job" : "Not seeking"
+      }})</mat-card-subtitle
+    >
+  </mat-card>
+</div>
