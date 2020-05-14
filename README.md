@@ -28,5 +28,7 @@ addition, [Nodemailer](https://nodemailer.com/) was used to email recruiters.
 Finally, [Mongoose](https://mongoosejs.com/) was used to access our Mongo
 database, which has two collections - users and recruiters.
 
-###Test it yourself [Node, Mongo required] Simply download the repository and
-run app.js using Node. Navigate to localhost/3030 to access the web page.
+### Test it yourself [Node, Mongo required]
+
+Simply download the repository and run app.js using Node. Navigate to
+localhost/3030 to access the web page.
