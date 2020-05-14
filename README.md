@@ -1,6 +1,6 @@
 # Candidates
 
-## Overvieww
+## Overview
 
 Created as our final project for the "CS3754: Cloud Software Development" course
 at Virginia Tech, this webapp was designed to reverse the typical dynamic
