@@ -30,7 +30,7 @@ database, which has two collections - users and recruiters.
 
 ### Test it yourself [Node, Mongo required]
 
-Simply download the repository and run app.js using Node. Navigate to
+Simply download the repository and run app.js using Node. Also ensure you have MongoDB running. Navigate to
 localhost:3030 to access the web page.
 
 ![sample](readme/1.png)
